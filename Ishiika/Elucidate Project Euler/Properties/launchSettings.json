@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "Run All Solutions": {
+      "commandName": "Project",
+      "commandLineArgs": "all"
+    },
+    "Specific Problem": {
+      "commandName": "Project",
+      "commandLineArgs": "01"
+    },
+    "Most Recent Problem": {
+      "commandName": "Project"
+    }
+  }
+}

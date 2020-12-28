@@ -25,8 +25,6 @@ namespace Problem_001
                     .Where(n => n % firstrequirement == 0 || n % secondRequirement == 0)
                     .Sum(n => n);
 
-            Log.Verbose("Test");
-
             Log.Information("The sum of all numbers from {rangeLowerBound} to {rangerUpperBound} divisable by {firstrequirement} or {secondRequirement} is {awnser}",
                 rangerLowerBound, rangerUpperBound, firstrequirement, secondRequirement, awnser);
         }
