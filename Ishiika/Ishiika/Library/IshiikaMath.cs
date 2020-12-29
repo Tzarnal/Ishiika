@@ -5,7 +5,7 @@ namespace Ishiika.Library
 {
     public static class IshiikaMath
     {
-        public static IEnumerable<long> Primes(int UpperLimit)
+        public static IEnumerable<int> Primes(int UpperLimit)
         {
             //No primes before 2.
             if (UpperLimit < 2)
