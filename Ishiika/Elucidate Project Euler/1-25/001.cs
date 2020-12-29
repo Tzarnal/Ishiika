@@ -1,8 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Collections.Generic;
-using RegExtract;
+﻿using System.Linq;
 using Serilog;
 using Ishiika;
 

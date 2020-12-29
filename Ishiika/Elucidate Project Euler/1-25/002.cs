@@ -1,9 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Collections.Generic;
-using RegExtract;
-using Serilog;
+﻿using Serilog;
 using Ishiika;
 
 namespace Problem_002
