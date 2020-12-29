@@ -1,9 +1,9 @@
 ﻿using Serilog;
 using Ishiika;
 
-namespace Problem_002
+namespace Problems1_25
 {
-    internal class Problem_002 : IIshiikaProblem
+    public class Problem_002 : IIshiikaProblem
     {
         public string ProblemName => "Even Fibonacci numbers";
         public string ProblemURL => $"https://projecteuler.net/problem={ProblemID}";

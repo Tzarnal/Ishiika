@@ -3,9 +3,9 @@ using Serilog;
 using Ishiika;
 using Ishiika.Library;
 
-namespace Problem_003
+namespace Problems1_25
 {
-    internal class TemplateProblem : IIshiikaProblem
+    internal class Problem003 : IIshiikaProblem
     {
         public string ProblemName => "Largest prime factor";
         public string ProblemURL => $"https://projecteuler.net/problem={ProblemID}";

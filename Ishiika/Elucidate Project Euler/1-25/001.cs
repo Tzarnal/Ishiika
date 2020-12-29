@@ -2,9 +2,9 @@
 using Serilog;
 using Ishiika;
 
-namespace Problem_001
+namespace Problems1_25
 {
-    internal class Problem_001 : IIshiikaProblem
+    public class Problem_001 : IIshiikaProblem
     {
         public string ProblemName => "Multiples of 3 and 5";
         public string ProblemURL => "https://projecteuler.net/problem=1";
