@@ -36,7 +36,7 @@ namespace Problems1_25
             while (number < int.MaxValue)
             {
                 //All numbers in the range will divide it without remainder
-                if (range.All(r => number % r == 0))
+                if (limitedRange.All(r => number % r == 0))
                 {
                     Log.Information("Found {number}.", number);
                     return;
