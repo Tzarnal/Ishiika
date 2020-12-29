@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using RegExtract;
 using Serilog;
 using Ishiika;
+using Ishiika.Library;
 
 namespace Problem_000
 {
