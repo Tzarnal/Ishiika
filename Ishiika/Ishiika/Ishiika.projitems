@@ -15,6 +15,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Framework\SpecificProblem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IIshiikaProblem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Library\IshiikaMath.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Template\TemplateProblem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Template\TemplateProblemEuler.cs" />
   </ItemGroup>
 </Project>

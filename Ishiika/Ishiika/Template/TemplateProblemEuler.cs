@@ -1,18 +1,16 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
 using System.Collections.Generic;
-using RegExtract;
 using Serilog;
 using Ishiika;
 using Ishiika.Library;
 
-namespace Problem_000
+namespace Problem0_0
 {
-    class TemplateProblem : IIshiikaProblem
+    public class TemplateProblem : IIshiikaProblem
     {
         public string ProblemName => "Template Problem";
-        public string ProblemURL => "https://template.website/problem";
+        public string ProblemURL => $"https://projecteuler.net/problem={ProblemID}";
         public int ProblemID => 1;
 
         public void Solve()
