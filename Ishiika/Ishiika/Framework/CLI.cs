@@ -135,7 +135,7 @@ namespace Ishiika.Framework
         private void ProblemRunner(IIshiikaProblem problem)
         {
             Console.WriteLine();
-            Log.Information("Running {ProblemName}", problem.ProblemName);
+            Log.Information("Running {id}: {ProblemName}", problem.ProblemID, problem.ProblemName);
             Log.Information("Problem found here: {url}", problem.ProblemURL);
 
             Log.Logger = CLI.IndentLogger;
