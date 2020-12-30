@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Ishiika.Library
 {
     public static class IshiikaMath
     {
-        public static IEnumerable<int> Primes(int UpperLimit)
+        //Naive, does not use a sieve but still pretty fast
+        public static IEnumerable<int> GeneratePrimes(int UpperLimit)
         {
             //No primes before 2.
             if (UpperLimit < 2)
@@ -21,40 +23,37 @@ namespace Ishiika.Library
                 yield break;
             }
 
-            const int offset = 3;
-
-            //Helpers
-            static int ToNumber(int index) => (2 * index) + offset;
-            static int ToIndex(int number) => (number - offset) / 2;
-
-            //Create a an array
-            var bits = new bool[ToIndex(UpperLimit) + 1];
-
-            var upperSqrtIndex = ToIndex((int)Math.Sqrt(UpperLimit));
-            for (var i = 0; i <= upperSqrtIndex; i++)
+            for (int i = 3; i < UpperLimit; i += 2)
             {
-                // If this bit has already been turned off, then its associated number is composite.
-                if (bits[i]) continue;
-                var number = ToNumber(i);
-
-                // The instant we have a known prime, immediately yield its value.
-                yield return number;
-
-                // Any multiples of number are composite and their respective bits should be turned off.
-                for (var j = ToIndex(number * number); (j > i) && (j < bits.Length); j += number)
+                if (IsPrime(i))
                 {
-                    bits[j] = true;
+                    yield return i;
+                }
+            }
+        }
+
+        public static bool IsPrime(int Number)
+        {
+            if (Number < 2)
+                return false;
+
+            if (Number == 2)
+                return true;
+
+            if (Number % 2 == 0)
+                return false;
+
+            var upperLimit = Math.Sqrt(Number) + 1;
+
+            for (int i = 3; i < upperLimit; i += 2)
+            {
+                if (Number % i == 0)
+                {
+                    return false;
                 }
             }
 
-            // Output remaining primes once bit array is fully resolved:
-            for (var i = upperSqrtIndex + 1; i < bits.Length; i++)
-            {
-                if (!bits[i])
-                {
-                    yield return ToNumber(i);
-                }
-            }
+            return true;
         }
     }
 }
