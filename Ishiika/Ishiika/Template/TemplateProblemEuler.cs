@@ -5,13 +5,13 @@ using Serilog;
 using Ishiika;
 using Ishiika.Library;
 
-namespace Problem0_0
+namespace Problems1_25
 {
-    public class TemplateProblem : IIshiikaProblem
+    public class Problem000 : IIshiikaProblem
     {
         public string ProblemName => "Template Problem";
         public string ProblemURL => $"https://projecteuler.net/problem={ProblemID}";
-        public int ProblemID => 1;
+        public int ProblemID => 0;
 
         public void Solve()
         {
