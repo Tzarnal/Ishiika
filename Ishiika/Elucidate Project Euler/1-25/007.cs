@@ -21,7 +21,7 @@ namespace Problems1_25
 
         public void NthPrime(int n)
         {
-            var prime = IshiikaMath.GeneratePrimes(int.MaxValue).Skip(n - 1).Take(1).First();
+            var prime = IshiikaMath.GeneratePrimesTrialDivision(int.MaxValue).Skip(n - 1).Take(1).First();
 
             Log.Information("The {n}th prime is {prime}", n, prime);
         }

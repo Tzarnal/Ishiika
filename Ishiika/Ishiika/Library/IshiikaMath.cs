@@ -7,7 +7,7 @@ namespace Ishiika.Library
     public static class IshiikaMath
     {
         //Naive, does not use a sieve but still pretty fast
-        public static IEnumerable<int> GeneratePrimes(int UpperLimit)
+        public static IEnumerable<int> GeneratePrimesTrialDivision(int UpperLimit)
         {
             //No primes before 2.
             if (UpperLimit < 2)
@@ -29,6 +29,15 @@ namespace Ishiika.Library
                 {
                     yield return i;
                 }
+            }
+        }
+
+        public static IEnumerable<long> GeneratePrimes(long UpperLimit)
+        {
+            var sieve = new SieveOfEratosthenes((ulong)UpperLimit);
+            foreach (var prime in sieve)
+            {
+                yield return (long)prime;
             }
         }
 

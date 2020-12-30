@@ -26,7 +26,7 @@ namespace Problems1_25
             var sqrtTarget = (int)Math.Sqrt(target);
 
             //Go through all the primes up tot the square root of the target and check if its a factor
-            foreach (var prime in IshiikaMath.GeneratePrimes(sqrtTarget))
+            foreach (var prime in IshiikaMath.GeneratePrimesTrialDivision(sqrtTarget))
             {
                 if (target % prime == 0)
                 {
