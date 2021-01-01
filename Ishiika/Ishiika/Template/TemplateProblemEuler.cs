@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Serilog;
 using Ishiika;
 using Ishiika.Library;
+using System.Numerics;
 
 namespace Problems1_25
 {
